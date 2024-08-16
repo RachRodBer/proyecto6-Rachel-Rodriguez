@@ -5,7 +5,9 @@ import plotly_express as px
         
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 
-print('Información sobre venta de vehículos en Estados Unidos')
+st.markdown("# Análisis de venta de autos en Estados Unidos 🚗")
+st.markdown("### Una herramienta interactiva para explorar los datos 📊")
+
 
 hist_button = st.button('Construir histograma') # crear un botón
 if hist_button: # al hacer clic en el botón
@@ -23,3 +25,5 @@ if scatter_button:  # al hacer clic en el botón
     st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
     fig = px.scatter(car_data, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
+
+st.markdown("###### Elaborado por: Rachel Rodríguez")
